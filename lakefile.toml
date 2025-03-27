@@ -1,0 +1,14 @@
+name = "Lean4Game"
+version = "0.1.0"
+defaultTargets = ["lean4game"]
+
+[[lean_lib]]
+name = "Lean4Game"
+
+[[lean_exe]]
+name = "lean4game"
+root = "Main"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
