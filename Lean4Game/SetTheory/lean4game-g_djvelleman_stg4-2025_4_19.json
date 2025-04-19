@@ -1,0 +1,756 @@
+{
+  "inventory": [
+    "exact",
+    "elt",
+    "[anonymous]",
+    "sub",
+    "have",
+    "intro",
+    "imp",
+    "STG4.Subset.refl",
+    "STG4.Subset.trans",
+    "by_contra",
+    "not",
+    "rfl",
+    "comp",
+    "iff",
+    "STG4.mem_compl_iff",
+    "rewrite",
+    "rw",
+    "STG4.compl_subset_compl_of_subset",
+    "apply",
+    "push_neg",
+    "Set.Subset.antisymm",
+    "STG4.compl_compl",
+    "constructor",
+    "Iff.intro",
+    "and",
+    "Set.mem_inter_iff",
+    "inter",
+    "And.intro",
+    "STG4.inter_subset_swap",
+    "STG4.inter_comm",
+    "ext",
+    "STG4.inter_assoc",
+    "Or.inl",
+    "Or.inr",
+    "or",
+    "Set.mem_union",
+    "union",
+    "rcases",
+    "STG4.union_subset_swap",
+    "STG4.union_comm",
+    "left",
+    "right",
+    "STG4.union_assoc",
+    "STG4.compl_union",
+    "STG4.compl_inter",
+    "STG4.inter_distrib_left",
+    "STG4.union_distrib_left",
+    "Set.mem_sInter",
+    "all",
+    "famint",
+    "STG4.mem_pair",
+    "by_cases",
+    "Exists.intro",
+    "ex",
+    "use",
+    "Set.mem_sUnion",
+    "famunion",
+    "obtain",
+    "Set.mem_setOf",
+    "Set.mem_singleton_iff"
+  ],
+  "openedIntro": true,
+  "data": {
+    "Subset": {
+      "1": {
+        "code": "exact h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact h1 h2\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": [
+          0
+        ]
+      },
+      "3": {
+        "code": "  have h : x ∈ B := h1 h3\n  exact (h2 h)",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 15,
+            "positionLineNumber": 2,
+            "positionColumn": 15
+          }
+        ],
+        "help": [
+          1
+        ]
+      },
+      "4": {
+        "code": "intro h3\nexact h2 (h1 h3)\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "intro x h\nexact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 2,
+            "positionColumn": 8
+          }
+        ],
+        "help": [
+          1
+        ]
+      },
+      "6": {
+        "code": "intro x h\nexact h2 (h1 h)",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 16,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "Complement": {
+      "1": {
+        "code": "by_contra h\nexact h2 (h h1)",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 10,
+            "positionLineNumber": 1,
+            "positionColumn": 10
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "rfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 1,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro x h2\nrewrite [mem_compl_iff A x]\nrewrite [mem_compl_iff] at h2\nby_contra h\nexact h2 (h1 h)\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 16,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "apply Subset.antisymm\nintro x h\nrewrite [mem_compl_iff] at h\nrewrite [mem_compl_iff] at h\npush_neg at h\nexact h\nintro x h\nrewrite [mem_compl_iff]\nby_contra h1\nexact h1 h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 11,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "apply Iff.intro\nintro h\nexact compl_subset_compl_of_subset h\nintro h x h1\nby_contra h2\nexact h h2 h1",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "Intersection": {
+      "1": {
+        "code": "exact h.left",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 13,
+            "positionLineNumber": 1,
+            "positionColumn": 13
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "rewrite [mem_inter_iff] at h\nexact h.right\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 29,
+            "positionLineNumber": 1,
+            "positionColumn": 29
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "  intro x h\n  exact h.left\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "exact And.intro h1 h2\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "  intro x h\n  apply And.intro\n  exact h1 h\n  exact h2 h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "  intro x h\n  apply And.intro\n  exact h.right\n  exact h.left\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "apply Subset.antisymm\nexact inter_subset_swap A B\nexact inter_subset_swap B A\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 28,
+            "positionLineNumber": 3,
+            "positionColumn": 28
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "  ext x\n  apply Iff.intro\n  { intro ⟨⟨hA, hB⟩, hC⟩\n    exact And.intro hA (And.intro hB hC) }\n  { intro ⟨hA, ⟨hB, hC⟩⟩\n    exact And.intro (And.intro hA hB) hC }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 43,
+            "positionLineNumber": 6,
+            "positionColumn": 43
+          }
+        ],
+        "help": []
+      }
+    },
+    "Union": {
+      "1": {
+        "code": "exact Or.inl h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 15,
+            "positionLineNumber": 1,
+            "positionColumn": 15
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "  intro x h\n  -- rewrite [Set.mem_union x A B]\n  exact Or.inr h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 17,
+            "positionLineNumber": 3,
+            "positionColumn": 17
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro x h3\nrcases h3 with h | h\n{ exact h1 h }\n{ exact h2 h }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "  intro x h\n  rcases h with h1 | h1\n  { exact Or.inr h1 }\n  { exact Or.inl h1 }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "  apply Set.Subset.antisymm\n  exact union_subset_swap A B\n  exact union_subset_swap B A",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 30,
+            "positionLineNumber": 3,
+            "positionColumn": 30
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "  ext x\n  apply Iff.intro\n  { intro h\n    rcases h with hAB | hC\n    { rcases hAB with hA | hB\n      { exact Or.inl hA }\n      { exact Or.inr (Or.inl hB) } }\n    { exact Or.inr (Or.inr hC) } }\n  { intro h\n    rcases h with hA | hBC\n    { exact Or.inl (Or.inl hA) }\n    { rcases hBC with hB | hC\n      { exact Or.inl (Or.inr hB) }\n      { exact Or.inr hC } } }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 14,
+            "selectionStartColumn": 30,
+            "positionLineNumber": 14,
+            "positionColumn": 30
+          }
+        ],
+        "help": []
+      }
+    },
+    "Combination": {
+      "1": {
+        "code": "apply Set.Subset.antisymm\n{ intro x h\n  apply And.intro\n  { intro hA\n    { exact h (Or.inl hA) } }\n  { intro hB\n    { exact h (Or.inr hB) } } }\n{ intro x h hAB\n  rcases hAB with hA | hB\n  { exact h.left hA }\n  { exact h.right hB } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 11,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 11,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "ext x\napply Iff.intro\n{ intro h\n  by_contra h1\n  rewrite [←mem_compl_iff] at h1\n  rewrite [compl_union Aᶜ Bᶜ] at h1\n  rewrite [compl_compl, compl_compl] at h1\n  exact h h1 }\n{ intro h hAB\n  rcases h with hnA | hnB\n  { exact hnA hAB.left }\n  { exact hnB hAB.right } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 13,
+            "positionLineNumber": 5,
+            "positionColumn": 13
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "  ext x\n  apply Iff.intro\n  { intro ⟨ hA, hBC ⟩\n    rcases hBC with hB | hC\n    { exact Or.inl ⟨ hA, hB ⟩ }\n    { exact Or.inr ⟨ hA, hC ⟩ } }\n  { intro h\n    rcases h with ⟨ hA, hB ⟩ | ⟨ hA, hC ⟩\n    { exact ⟨ hA, Or.inl hB ⟩ }\n    { exact ⟨ hA, Or.inr hC ⟩ } }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 10,
+            "selectionStartColumn": 34,
+            "positionLineNumber": 10,
+            "positionColumn": 34
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "  ext x\n  apply Iff.intro\n  { intro h\n    rcases h with hA | ⟨ hB, hC ⟩\n    { exact ⟨ Or.inl hA, Or.inl hA ⟩ }\n    { exact ⟨ Or.inr hB, Or.inr hC ⟩ } }\n  { intro ⟨ hAB, hAC ⟩\n    rcases hAB with hA | hB\n    { exact Or.inl hA }\n    { rcases hAC with hA | hC\n      { exact Or.inl hA }\n      { exact Or.inr ⟨ hB, hC ⟩ } } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 41,
+            "positionLineNumber": 6,
+            "positionColumn": 41
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "  intro x hA\n  have hBC : x ∈ B ∪ C := h1 (Or.inl hA)\n  rcases hBC with hB | hC\n  { exact hB }\n  { exact (h2 ⟨ hA, hC ⟩).left }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 6,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "FamInter": {
+      "1": {
+        "code": "intro x h\nrewrite [Set.mem_sInter] at h\nexact h A h1",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "intro x h A hF\nhave hG : A ∈ G := h1 hF\nexact h A hG\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "  ext x\n  apply Iff.intro\n  { intro h F hAB\n    rcases hAB with hFA | hFB\n    { rewrite [hFA]\n      exact h.left }\n    { rewrite [hFB]\n      exact h.right } }\n  { intro hAB\n    have hA : x ∈ A := hAB A (Or.inl rfl)\n    have hB : x ∈ B := hAB B (Or.inr rfl)\n    exact ⟨ hA, hB ⟩ }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 13,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 13,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "ext x\napply Iff.intro\n{ intro h\n  apply And.intro\n  {   intro S hF\n      have hS : x ∈ S := h S (Or.inl hF)\n      exact hS }\n  {   intro S hG\n      have hS : x ∈ S := h S (Or.inr hG)\n      exact hS } }\n{   intro h S hFG\n    rcases hFG with hF | hG\n    { exact h.left S hF }\n    { exact h.right S hG } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 11,
+            "selectionStartColumn": 5,
+            "positionLineNumber": 11,
+            "positionColumn": 5
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "  apply Iff.intro\n  { intro h S hF x hA\n    have hS := h hA S hF\n    exact hS }\n  { intro h x hA S hF\n    have hS := h S hF hA\n    exact hS }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 15,
+            "positionLineNumber": 7,
+            "positionColumn": 15
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro x h\nby_cases hA : x ∈ A\n{ exact Or.inl hA }\n{ apply Or.inr\n  intro S hF\n  have hAS : x ∈ A ∪ S := h (A ∪ S) (h1 S hF)\n  rcases hAS with hA' | hS\n  { exact (hA hA').elim }\n  { exact hS } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 10,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 10,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "FamUnion": {
+      "1": {
+        "code": "exact Exists.intro A (Subset.refl A)\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 1,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "intro x h\nexact Exists.intro A ⟨ h1, h ⟩",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 31,
+            "positionLineNumber": 2,
+            "positionColumn": 31
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "  intro x hUF\n  obtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := hUF\n  use W\n  exact ⟨ h1 hF, hW ⟩\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "ext x\napply Iff.intro\n{ intro h\n  rcases h with hA | hB\n  { use A\n    exact ⟨ Or.inl rfl, hA ⟩ }\n  { use B\n    exact ⟨ Or.inr rfl, hB ⟩ } }\n{ intro h\n  obtain ⟨ W, ⟨ hAB, hW ⟩ ⟩ := h\n  rcases hAB with hA | hB\n  { rewrite [←hA]\n    exact Or.inl hW }\n  { rcases hB\n    { exact Or.inr hW } } }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 15,
+            "positionColumn": 28
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "ext x\napply Iff.intro\n{ intro hsU\n  obtain ⟨ W, ⟨ hFG, hW ⟩ ⟩ := hsU\n  rcases hFG with hF | hG\n  { left; use W }\n  { right; use W } }\n{ intro h\n  rcases h with hsI | hsI\n  { obtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := hsI\n    use W\n    exact ⟨ Or.inl hF, hW ⟩ }\n  { obtain ⟨ W, ⟨ hG, hW ⟩ ⟩ := hsI\n    use W\n    exact ⟨ Or.inr hG, hW ⟩ } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 10,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 10,
+            "positionColumn": 14
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "apply Iff.intro\n{ intro h S hF x hS\n  have hsU : x ∈ ⋃₀ F := by\n    use S\n  exact h hsU }\n{ intro h x hsU\n  obtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := hsU\n  exact h W hF hW }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 9,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "ext x\napply Iff.intro\n{ intro ⟨ hA, hsU ⟩\n  obtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := hsU\n  have hAW : x ∈ A ∩ W := ⟨ hA, hW ⟩\n  have hG : (A ∩ W) ∈ { V | ∃ W, W ∈ F ∧ V = A ∩ W } := by\n    use W\n  use (A ∩ W) }\n{ intro hsU\n  obtain ⟨ AW, ⟨ h, hAW ⟩ ⟩ := hsU\n  obtain ⟨ W, ⟨ hF , heqAW ⟩ ⟩ := h\n  rewrite [heqAW] at hAW\n  apply And.intro\n  { exact hAW.left }\n  { use W\n    exact ⟨ hF, hAW.right ⟩ } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 8,
+            "selectionStartColumn": 16,
+            "positionLineNumber": 8,
+            "positionColumn": 16
+          }
+        ],
+        "help": []
+      }
+    },
+    "FamCombo": {
+      "1": {
+        "code": "ext x\napply Iff.intro\n{ intro hnsU S hcF\n  rewrite [Set.mem_setOf] at hcF\n  by_contra hnS\n  have h : x ∈ ⋃₀ F := by\n    use Sᶜ\n    exact ⟨ hcF, hnS ⟩\n  exact hnsU h }\n{ intro h h1\n  obtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := h1\n  rewrite [←compl_compl W] at hF\n  exact h Wᶜ hF hW }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 9,
+            "selectionStartColumn": 17,
+            "positionLineNumber": 9,
+            "positionColumn": 17
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "  ext x\n  apply Iff.intro\n  { intro hnsI\n    by_contra hnsU\n    apply hnsI\n    intro W hF\n    by_contra hnW\n    apply hnsU\n    use Wᶜ\n    apply And.intro\n    { rewrite [Set.mem_setOf]\n      rewrite [compl_compl]\n      exact hF }\n    { exact hnW }\n     }\n  { intro h hsI\n    obtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := h\n    rewrite [Set.mem_setOf] at hF\n    have hnW : x ∈ Wᶜ := hsI Wᶜ hF\n    exact hnW hW }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 21,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 21,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "obtain ⟨ w, ⟨ hF, h ⟩ ⟩ := h2\nuse w\napply And.intro\n{ exact hF }\n{ obtain ⟨ t, ⟨ hG, hwt ⟩ ⟩ := h1 w hF\n  have htw := h t hG\n  rewrite [Set.Subset.antisymm htw hwt] at hG\n  exact hG }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 9,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 9,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "intro x ⟨ hsU, hsI ⟩\nobtain ⟨ W1, ⟨ hF, hW1 ⟩ ⟩ := hsU\nobtain ⟨ W2, ⟨ hG, hW1W2 ⟩ ⟩ := h1 W1 hF\nhave hW2 := hsI W2 hG\nuse (W1 ∩ W2)\nexact ⟨ hW1W2, ⟨ hW1, hW2 ⟩ ⟩\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 35,
+            "positionLineNumber": 3,
+            "positionColumn": 35
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "intro x ⟨ hsU, hnsU ⟩\nobtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := hsU\nuse W\napply And.intro\n{ apply And.intro\n  { exact hF }\n  { intro hG\n    apply hnsU\n    use W } }\n{ exact hW }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 10,
+            "selectionStartColumn": 13,
+            "positionLineNumber": 10,
+            "positionColumn": 13
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro x ⟨ hsUF, hsUG ⟩\nobtain ⟨ W1, ⟨ hF, hW1 ⟩ ⟩ := hsUF\nobtain ⟨ W2, ⟨ hG, hW2 ⟩ ⟩ := hsUG\nuse W1\napply And.intro\n{ apply And.intro\n  { exact hF }\n  { by_contra h\n    obtain ⟨ _, hnsG ⟩ := h1 (by\n      use W1\n      exact ⟨ ⟨ hF, h ⟩, hW1 ⟩)\n    apply hnsG\n    use W2 } }\n{ exact hW1 }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 14,
+            "positionColumn": 14
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "intro x ⟨ hsUF, hnsI ⟩\nobtain ⟨ W, ⟨ hF, hW ⟩ ⟩ := hsUF\nby_contra h\napply hnsI\nintro V hG\nby_contra hnV\napply h\nuse (W ∩ Vᶜ)\napply And.intro\n{ use W\n  apply And.intro\n  { exact hF }\n  { use V } }\n{ exact ⟨ hW, hnV ⟩ }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 15,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 15,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "have h2 := h1 { s | ∃ x , s = { x } ∧ x ∈ A} (by\n-- have h2 := h1 { s | ∃ x , s = { x } ∧ { x } = A} (by\n  apply Set.Subset.antisymm\n  { intro x h\n    obtain ⟨ W, ⟨ h₀, hW ⟩ ⟩ := h\n    obtain ⟨ x1, ⟨ hdW, hA ⟩ ⟩ := h₀\n    rewrite [hdW] at hW\n    rewrite [Set.mem_singleton_iff.mp hW]\n    exact hA }\n  { intro x h\n    use {x}\n    apply And.intro\n    { use x }\n    { rfl } } )\nobtain ⟨ x, ⟨ h, _ ⟩ ⟩ := h2\nuse x\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 8,
+            "selectionStartColumn": 42,
+            "positionLineNumber": 8,
+            "positionColumn": 42
+          }
+        ],
+        "help": [
+          0
+        ]
+      }
+    }
+  },
+  "difficulty": 2,
+  "typewriterMode": false
+}

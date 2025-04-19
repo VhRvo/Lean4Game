@@ -1,6 +1,7 @@
 import Mathlib.Data.Set.Basic
 
 theorem compl_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by
+
   apply Set.Subset.antisymm
   { intro x h
     apply And.intro
