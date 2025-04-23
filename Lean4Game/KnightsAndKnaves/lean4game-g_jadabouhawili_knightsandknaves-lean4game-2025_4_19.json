@@ -1,0 +1,583 @@
+{
+  "inventory": [
+    "rfl",
+    "[anonymous]",
+    "assumption",
+    "exact",
+    "Nat",
+    "rw",
+    "Nat.mul_left_cancel",
+    "four_pos",
+    "UnicodeSymbols",
+    "Prop",
+    "constructor",
+    "And.intro",
+    "logic_and",
+    "left",
+    "right",
+    "logic_or",
+    "imp",
+    "intro",
+    "cases",
+    "unfold",
+    "contradiction",
+    "False.elim",
+    "False",
+    "Not",
+    "have",
+    "simp",
+    "eq_false",
+    "false_or_iff",
+    "notleft_right",
+    "iff_of_false",
+    "iff_of_true",
+    "not_iff",
+    "not_iff_not",
+    "notright_left",
+    "or_false_iff",
+    "Finset.mem_inter",
+    "disjoint",
+    "Finset",
+    "KnightsKnaves",
+    "inter",
+    "mem",
+    "inleft_notinright",
+    "inright_notinleft",
+    "exfalso",
+    "IamKnave",
+    "Iff",
+    "knight_or_knave",
+    "Islander.isKnave",
+    "Islander.isKnight",
+    "Islander.knave_said",
+    "Islander.knight_said",
+    "Islander.not_isKnight_and_isKnave",
+    "Islander.said_knave",
+    "Islander.said_knight",
+    "dsl_iamknave",
+    "DSLKnightsKnaves",
+    "Islander.dsl_iamknave",
+    "knave_to_knight",
+    "knight_to_knave",
+    "push_neg",
+    "Islander.notknight_said",
+    "not_iff'"
+  ],
+  "openedIntro": true,
+  "data": {
+    "EquationalReasoning": {
+      "1": {
+        "code": "rfl",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 1,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "  rw [h, g]",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 12,
+            "positionLineNumber": 1,
+            "positionColumn": 12
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "exact Nat.mul_left_cancel four_pos h\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 37,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "Logic": {
+      "1": {
+        "code": "  exact hP\n  ",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 3,
+            "positionLineNumber": 2,
+            "positionColumn": 3
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact And.intro hP hQ\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 22,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "  left\n  exact hP",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 2,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "exact ptoq hP",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 1,
+            "positionColumn": 14
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "  intro h\n  exact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 10,
+            "positionLineNumber": 2,
+            "positionColumn": 10
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "  cases h with\n  | inl hP => exact hPR hP\n  | inr hQ => exact hQR hQ",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 27,
+            "positionLineNumber": 3,
+            "positionColumn": 27
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "exact PsameQ.mp hP",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 19,
+            "positionLineNumber": 1,
+            "positionColumn": 19
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "exact hnP hP",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "exact hF.elim",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "10": {
+        "code": "  cases Or with\n  | inl hp => exact (notleft hp).elim\n  | inr hq => exact hq",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 3,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "11": {
+        "code": "  have hQisFalse : Q = False := eq_false notright\n  simp [hQisFalse] at Or\n  exact Or",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 3,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "12": {
+        "code": "cases h with\n| inl hP => exact hP\n| inr hF => contradiction\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "KnightsAndKnavesLemmas": {
+      "1": {
+        "code": "have A_in_empty : A ∈ left ∩ right:= Finset.mem_inter.mpr (And.intro Aleft Aright)\nrw [h] at A_in_empty\nexact A_not_in_Empty A_in_empty\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "intro Aright\nhave h1 := disjoint h Aleft Aright \nexact h1",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro AKnave\nexact disjoint h AKnight AKnave",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 32
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "intro Aleft\nexact disjoint h Aleft Aright",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 30,
+            "positionLineNumber": 2,
+            "positionColumn": 30
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "intro h1\nexact disjoint h h1 h'",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "cases Or with\n| inl AKnight => exact (h' AKnight).elim\n| inr AKnave => exact AKnave\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "cases h'' with\n| inl AKnight => exact AKnight\n| inr AKnave => exact (h' AKnave).elim",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 39
+          }
+        ],
+        "help": []
+      }
+    },
+    "KnightsAndKnaves": {
+      "1": {
+        "code": "cases h1 with\n| inl AKnight =>\n{ have AKnave := stA.mp AKnight\n  exact disjoint h AKnight AKnave }\n| inr AKnave =>\n{ have ANKnave := stAn.mp AKnave\n  exact ANKnave AKnave }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 7,
+            "positionColumn": 25
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "",
+        "completed": false,
+        "selections": [],
+        "help": []
+      }
+    },
+    "KnightsAndKnaves2": {
+      "1": {
+        "code": "constructor\n{ intro hA\n  have hB := (stA.mp hA).left\n  have hnA := (stB.mp hB).right\n  exact hnA hA }\n{ constructor\n  { intro hB\n    have ⟨ hC, hnA ⟩ := stB.mp hB\n    have hA := stA.mpr ⟨ hB, hC ⟩\n    exact hnA hA }\n  { intro hC\n    have hB := stB.mpr ⟨ hC, λ hA ↦ (stB.mp (stA.mp hA).left).right hA ⟩\n    have hA := stA.mpr ⟨ hB, hC ⟩\n    have hnA := (stB.mp hB).right\n    exact hnA hA } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 16,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 16,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "rw [←iff_iff_and_or_not_and_not] at stR\n\n\n",
+        "completed": false,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "DSL_Knights_Knaves": {
+      "1": {
+        "code": "knight_or_knave A with AKnight AKnave\n{ have AKnave := knight_said hAKn AKnight\n  exact not_isKnight_and_isKnave AKnight AKnave }\n{ have nAKnave :=  knave_said hAKn AKnave\n  exact nAKnave AKnave }",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 5,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "simp at stA\nexact dsl_iamknave stA\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "constructor\n{ rw [isKnave_notisKnightIff]\n  intro BKnight\n  exact dsl_iamknave (knight_said hB BKnight) }\n{ have BKnave := said_knave hB (λ hAKn ↦ dsl_iamknave hAKn)\n  exact said_knight hC BKnave }\n\n-- { knight_or_knave B with BKnight BKnave\n--   { have hAKn := knight_said hB BKnight\n--     exact False.elim (dsl_iamknave hAKn) }\n--   { exact BKnave } }\n-- { knight_or_knave C with CKnight CKnave\n--   { exact CKnight }\n--   { have nBKnave := knave_said hC CKnave\n--     knight_or_knave B with BKnight BKnave\n--     { have hAKn := knight_said hB BKnight\n--       exact False.elim (dsl_iamknave hAKn) }\n--     { exact False.elim (nBKnave BKnave) } } }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 7,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "have AKnight : A.isKnight := by\n  knight_to_knave\n  intro AKnave\n  exact knave_said stA AKnave (Or.inl AKnave)\nhave BKanve : B.isKnave := by\n  cases knight_said stA AKnight with\n  | inl AKnave => exact False.elim (not_isKnight_and_isKnave AKnight AKnave)\n  | inr BKnave => exact BKnave\nconstructor\nassumption\nassumption\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 12,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 12,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "have AKnight : A.isKnight := by\n  knight_to_knave\n  intro AKnave\n  have AKnight := said_knight stA (Or.inl AKnave)\n  exact not_isKnight_and_isKnave AKnight AKnave\nhave BKnight : B.isKnight := by\n  cases knight_said stA AKnight with\n  | inl AKnave => exact False.elim (not_isKnight_and_isKnave AKnight AKnave)\n  | inr BKnight => exact BKnight\nconstructor\nassumption\nassumption\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 13,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 13,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "have nAKnight : ¬ A.isKnight := by\n  intro AKnight\n  have AKnave :=  (knight_said stA AKnight).left\n  exact False.elim (not_isKnight_and_isKnave AKnight AKnave)\nhave BKnave : B.isKnave := by\n  knave_to_knight\n  intro BKnight\n  have AKnave : A.isKnave := by\n    knave_to_knight\n    assumption\n  have nBKnave : ¬ B.isKnave := by\n    intro BKnave\n    exact False.elim (not_isKnight_and_isKnave BKnight BKnave)\n  exact (notknight_said stA nAKnight) ⟨ AKnave, nBKnave ⟩\nconstructor\nassumption\nassumption\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 18,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 18,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "have IKnight_RKnight_Iff : Ira.isKnight ↔ Robert.isKnight := by\n  constructor\n  { intro IKnight\n    exact knight_said stI IKnight }\n  { intro RKnight\n    exact said_knight stI RKnight }\nhave RKnight : Robert.isKnight := by\n  exact said_knight stR IKnight_RKnight_Iff\nhave IKnight : Ira.isKnight := by\n  exact said_knight stI RKnight\nconstructor\nassumption\nassumption\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 13,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 13,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "have AKnave : A.isKnave := by\n  knave_to_knight\n  intro AKnight\n  have BKnight := knight_said stA AKnight\n  have h := knight_said stB BKnight\n  exact h ⟨ λ _ ↦ BKnight, λ _ ↦ AKnight ⟩ \nhave BKnave : B.isKnave := by\n  have nBKnight := knave_said stA AKnave\n  knave_to_knight\n  assumption\nconstructor\nassumption\nassumption\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 35,
+            "positionLineNumber": 4,
+            "positionColumn": 42
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "have RKnight : Robert.isKnight := by\n  knight_to_knave\n  intro RKnave\n  have not_RKnight_IKnight_Iff :=\n    knave_said stR RKnave\n  have RKnight_to_IKnight : Robert.isKnight → Ira.isKnight := by\n    intro RKnight\n    exact said_knight stI RKnight\n  have IKnight_to_RKnight : Ira.isKnight → Robert.isKnight := by\n    intro IKnight\n    exact knight_said stI IKnight\n  exact not_RKnight_IKnight_Iff ⟨ RKnight_to_IKnight, IKnight_to_RKnight⟩\nhave IKnight : Ira.isKnight := by\n  exact said_knight stI RKnight\nconstructor\nassumption\nassumption\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 17,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 17,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "10": {
+        "code": "knight_or_knave A with AKnight AKnave\n{ have BKnave : B.isKnave := knight_said stA AKnight\n  have h := knave_said stB BKnave\n  knave_to_knight\n  intro CKnight\n  exact h ⟨ λ _ ↦ CKnight, λ _ ↦ AKnight ⟩ }\n{ have BKnight : B.isKnight := by\n    knight_to_knave\n    exact knave_said stA AKnave\n  have AKnight_CKnight_Iff :=\n    knight_said stB BKnight\n  knave_to_knight\n  intro CKnight\n  exact False.elim (not_isKnight_and_isKnave (AKnight_CKnight_Iff.mpr CKnight) AKnave) }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 34,
+            "positionLineNumber": 7,
+            "positionColumn": 34
+          }
+        ],
+        "help": []
+      },
+      "11": {
+        "code": "knight_or_knave B with BKnight BKnave\n{ left\n  exact knight_said stB BKnight }\n{ have nBKnight : ¬ B.isKnight := by\n    intro BKnight\n    exact not_isKnight_and_isKnave BKnight BKnave\n  have AKnave : A.isKnave :=\n    said_knave stA nBKnight\n  have nAKnight : ¬ A.isKnight := by\n    intro AKnight\n    exact not_isKnight_and_isKnave AKnight AKnave\n  have not_AKnight_or_BKnight : ¬ (A.isKnight ∨ B.isKnight) := by\n    intro hAB\n    exact hAB.elim nAKnight nBKnight\n  have CKnave : C.isKnave := by\n    cases stC with\n    | inl h => exact said_knave h nAKnight\n    | inr h => exact False.elim (nBKnight h)\n  -- have CKnave : C.isKnave :=\n  --   said_knave stC not_AKnight_or_BKnight\n  right\n  unfold allKnaves\n  constructor\n  assumption\n  constructor\n  assumption\n  assumption }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 27,
+            "selectionStartColumn": 13,
+            "positionLineNumber": 27,
+            "positionColumn": 13
+          }
+        ],
+        "help": []
+      },
+      "12": {
+        "code": "-- unfold exactlyOneIsKnave at stB\n-- unfold allKnaves at stA\nhave nAKnight : ¬ A.isKnight := by\n  intro AKnight\n  have nAllKnaves : ¬ @allKnaves A B C := by\n    intro ⟨ AKnave, _, _ ⟩\n    exact not_isKnight_and_isKnave AKnight AKnave\n  have AKnave : A.isKnave :=\n    said_knave stA nAllKnaves\n  exact not_isKnight_and_isKnave AKnight AKnave\nhave AKnave : A.isKnave := by\n  knave_to_knight\n  exact nAKnight\nhave nAllKnaves : ¬ @allKnaves A B C :=\n  notknight_said stA nAKnight\nknight_or_knave B with BKnight BKnave\n{ have exactlyOneIsKnave : @exactlyOneIsKnave A B C :=\n    knight_said stB BKnight\n  cases exactlyOneIsKnave with\n  | inl h => exact ⟨ AKnave, h.right.right ⟩\n  | inr h =>\n    cases h with\n    | inl h => exact ⟨ AKnave, h.right.right ⟩\n    | inr h => exact False.elim (not_isKnight_and_isKnave h.left AKnave) }\n{ have nCKnave : ¬ C.isKnave := by\n    intro CKnave\n    exact nAllKnaves ⟨ AKnave, ⟨ BKnave, CKnave ⟩ ⟩\n  constructor\n  assumption\n  knight_to_knave\n  assumption }\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 32,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 28,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    }
+  },
+  "difficulty": 2,
+  "typewriterMode": false
+}
